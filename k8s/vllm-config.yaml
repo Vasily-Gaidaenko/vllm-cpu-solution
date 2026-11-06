@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vllm-config
+data:
+  serve.yaml: |
+    served-model-name:
+      - Qwen/Qwen2.5-0.5B-Instruct
+    host: "0.0.0.0"
+    port: 8000
+    dtype: float32
+    max-model-len: 384
+    max-num-seqs: 1
+    gpu-memory-utilization: 0.5
